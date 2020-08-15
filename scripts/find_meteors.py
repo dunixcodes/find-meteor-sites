@@ -3,6 +3,26 @@ import math
 
 
 def calc_dist(lat1, lon1, lat2, lon2):
+    """Calculates distance between two points on a sphere given their
+    longitudes and latitudes, using the haversine formula.
+
+    Parameters
+    ----------
+    lat1 : float
+        Latitude for first location
+    lon1 : float
+        Longtitude for first location
+    lat2 : float
+        Latitude for second location
+    lon2 : float
+        Longtitude for second location
+
+    Returns
+    -------
+    float
+        The great-circle distance between two points on a sphere given their
+        longitudes and latitudes.
+    """
     lat1 = math.radians(lat1)
     lon1 = math.radians(lon1)
     lat2 = math.radians(lat2)
@@ -21,6 +41,8 @@ def get_dist(meteor):
 
 
 if __name__ == '__main__':
+    # You can change my_loc to your own location or any other location
+    # I used 'https://www.findlatitudeandlongitude.com/' to grab my coordinates
     my_loc = (39.081237, -77.151401)
 
     meteor_resp = requests.get('https://data.nasa.gov/resource/y77d-th95.json')
