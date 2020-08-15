@@ -4,7 +4,7 @@ import math
 
 def calc_dist(lat1, lon1, lat2, lon2):
     """Calculates distance between two points on a sphere given their
-    longtitudes and latitudes, using the haversine formula.
+    longitudes and latitudes, using the haversine formula.
 
     Parameters
     ----------
